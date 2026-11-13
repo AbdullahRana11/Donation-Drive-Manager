@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>http://localhost:8000/index.html</loc></url>
-  <url><loc>http://localhost:8000/legal.html</loc></url>
-  <url><loc>http://localhost:8000/thank-you.html</loc></url>
-<url><loc>http://localhost:8000/drives.html</loc></url>
-<url><loc>http://localhost:8000/hubs.html</loc></url>
-<url><loc>http://localhost:8000/reports.html</loc></url>
-<url><loc>http://localhost:8000/about.html</loc></url>
+  <url>
+    <loc>https://abdullahrana11.github.io/Donation-Drive-Manager/</loc>
+  </url>
+  <url>
+    <loc>https://abdullahrana11.github.io/Donation-Drive-Manager/drives.html</loc>
+  </url>
+  <url>
+    <loc>https://abdullahrana11.github.io/Donation-Drive-Manager/hubs.html</loc>
+  </url>
+  <url>
+    <loc>https://abdullahrana11.github.io/Donation-Drive-Manager/reports.html</loc>
+  </url>
+  <url>
+    <loc>https://abdullahrana11.github.io/Donation-Drive-Manager/about.html</loc>
+  </url>
+  <url>
+    <loc>https://abdullahrana11.github.io/Donation-Drive-Manager/legal.html</loc>
+  </url>
 </urlset>
