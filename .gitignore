@@ -1,0 +1,36 @@
+# Keep reports and instructor references local.
+*.doc
+*.docx
+*.pdf
+*.ppt
+*.pptx
+/docs/reference/
+/docs/HEADER-UPDATE.md
+/docs/TYPOGRAPHY-UPDATE.md
+
+# Only publish the current submission screenshots.
+/docs/screenshots/*
+!/docs/screenshots/01-home-desktop.png
+!/docs/screenshots/02-donation-dashboard.png
+!/docs/screenshots/03-create-drive.png
+!/docs/screenshots/04-slot-conflict.png
+!/docs/screenshots/05-donor-details.png
+!/docs/screenshots/06-pledge-receipt.png
+!/docs/screenshots/07-collection-hubs.png
+!/docs/screenshots/08-mobile-donation.png
+
+# Local dependencies, private configuration and temporary files.
+node_modules/
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*
+*.tmp
+*.log
+*.bak
+*.zip
