@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Donate &amp; Browse Drives // AMANAT</title>
+  <meta name="description" content="Coordinate Twin Cities donation drives, allocate relief pledges and check collection hub capacity in AMANAT, a local educational registry.">
+  <meta name="keywords" content="AMANAT, donation drives, Islamabad, Rawalpindi, relief registry, CS344">
+  <meta name="author" content="Muhammad Abdullah Rana">
+  <meta property="og:title" content="AMANAT // Twin Cities Relief Registry">
+  <meta property="og:description" content="A civic donation logistics study: eight drives, four collection hubs, one accountable ledger.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/og-preview.svg">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/drives-typography.css">
+  <script src="js/app.js" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"GovernmentOrganization","name":"AMANAT: fictional Twin Cities Directorate","description":"CS344 educational simulation. Not a government agency, registered charity or operating collection network.","location":[{"@type":"CivicStructure","name":"H-12 NUST Gate 2 Logistics Desk","address":"H-12, Islamabad, Pakistan"},{"@type":"CivicStructure","name":"F-8 Markaz Civic Relief Center","address":"F-8 Markaz, Islamabad, Pakistan"},{"@type":"CivicStructure","name":"Saddar Cantt Depot Rawalpindi","address":"Saddar, Rawalpindi, Pakistan"},{"@type":"CivicStructure","name":"I-10/3 Industrial Dry Storage","address":"I-10/3, Islamabad, Pakistan"}]}</script>
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/header.css">
+</head>
+<body data-page="registry">
+  <a class="skip-link" href="#ledger-workbench">Skip to operations ledger</a>
+  <header class="masthead page-width brand-header">
+    <div class="masthead-main"><a class="wordmark" href="index.html">Amanat</a><div class="masthead-description"><p>Twin Cities Relief &amp;<br>Donation Drive Registry</p><span>Islamabad &amp; Rawalpindi Directorate</span></div><div class="masthead-actions"><a class="button primary" href="#pledge-desk">+ Record New Relief Pledge</a><button class="button" data-export>Export Ledger CSV <span class="header-arrow" aria-hidden="true">↗</span></button></div></div>
+    <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Home</a><a aria-current="page" class="active" href="drives.html">Donate</a><a href="hubs.html">Collection hubs</a><a href="reports.html">Past drives</a><a href="about.html">About & FAQ</a></nav>
+  </header>
+  <main class="page-width">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span>/</span><span>Twin Cities Operations</span><span>/</span><span id="breadcrumb-filter">Active Drive Ledger : All categories</span></nav>
+    <div class="demo-note"><span class="mono">ACADEMIC DEMONSTRATION</span> Sample operations, coordinators and audits. No real donations or dispatches are processed. Use sample donor details.</div>
+    <div id="storage-warning" class="error-box" role="alert" hidden></div>
+    <section class="kpi-strip" aria-label="Live operational summary">
+      <div><h2>ACTIVE DRIVES</h2><strong id="kpi-active">07</strong><p id="kpi-critical">3 critical / 8 total records</p></div>
+      <div><h2>ITEMS PLEDGED</h2><strong id="kpi-units">2,282</strong><p id="kpi-completion">of 3,290 target units / 69.4%</p></div>
+      <div><h2>PLEDGED CARGO</h2><strong id="kpi-weight">10,799.4 <small>kg</small></strong><p>Estimated from pledged items</p></div>
+      <div><h2>BOOKED PLACES</h2><strong id="kpi-slots">06 <small>/ 32</small></strong><p id="kpi-date">Reservations on selected dispatch date</p></div>
+    </section>
+    <div class="section-heading workbench-heading" id="ledger-workbench"><div><span class="eyebrow">THE OPERATIONS DESK</span><h1><span>Find a cause.</span> <span>Make a pledge.</span></h1></div><span class="issue-label">LIVE ALLOCATION REGISTER<br><span id="ledger-date"></span></span></div>
+    <div class="workbench">
+      <section class="registry-panel" aria-labelledby="registry-title">
+        <div class="panel-heading"><h2 id="registry-title">Donation drives</h2><span class="mono" id="result-count" role="status">8 RECORDS</span></div>
+        <div class="search-line"><label for="search" class="sr-only">Search title, ID, hub or quality rule</label><input id="search" type="search" placeholder="Search a drive, reference or quality rule..."><button id="filter-toggle" class="button filter-toggle" aria-expanded="false" aria-controls="filter-fields">Filters +</button></div>
+        <div id="filter-fields" class="filter-fields">
+          <label>Category<select id="filter-category"><option value="">All categories</option></select></label>
+          <label>Collection hub<select id="filter-hub"><option value="">All four hubs</option></select></label>
+          <label>Priority<select id="filter-urgency"><option value="">All priorities</option><option>CRITICAL</option><option>HIGH</option><option>STANDARD</option><option>FULFILLED</option></select></label>
+          <label>Order by<select id="sort-drives"><option value="priority">Urgency &amp; deficit gap</option><option value="completion">Completion: lowest first</option><option value="tonnage">Total tonnage: highest first</option><option value="deadline">Deadline: soonest</option></select></label>
+          <label class="check-label"><input type="checkbox" id="hide-fulfilled"> Hide fulfilled drives</label><button class="text-button" id="clear-filters">Clear filters ×</button>
+        </div>
+        <div class="ledger-columns" aria-hidden="true"><span>REFERENCE / RELIEF REQUIREMENT</span><span>ALLOCATION / DEFICIT</span></div>
+        <div id="drive-list" class="drive-list" aria-label="Filtered donation drives" aria-busy="false"></div>
+        <p class="ledger-footnote"><span class="status-square critical"></span> Critical priority is coordinator-assigned. Gauge color indicates completion below 50%.</p>
+      </section>
+      <aside id="pledge-desk" class="pledge-panel" aria-labelledby="pledge-title">
+        <div class="panel-heading dark"><h2 id="pledge-title">Make a pledge</h2><span class="mono">FORM / 01</span></div>
+        <form id="pledge-form" class="desk-form">
+          <p class="form-intro">Allocate goods. Reserve a collection window.</p>
+          <label for="pledge-drive">Choose a drive</label><select id="pledge-drive" name="drive" required></select>
+          <div class="assigned-hub"><span>ASSIGNED HUB</span><strong id="assigned-hub"></strong></div>
+          <div class="form-grid"><label>Quantity <span id="quantity-unit"></span><input id="pledge-quantity" name="quantity" type="number" min="1" step="1" value="1" required></label><label>Drop-off date<input id="pledge-date" name="date" type="date" required></label></div>
+          <label class="check-label"><input id="override-deficit" type="checkbox"> Allow extra items beyond the target</label>
+          <div id="impact-box" class="impact-box" aria-live="polite"></div>
+          <label>Collection window<select id="pledge-slot" name="slot" required><option value="">Choose a time window</option></select></label>
+          <div id="slot-status" class="slot-status" aria-live="polite"></div><button id="use-next-slot" type="button" class="text-button" hidden>Use suggested window →</button>
+          <div class="quality-box"><span class="eyebrow">Item quality requirements</span><p id="quality-rule"></p></div>
+          <fieldset><legend>Your details</legend><label>Full name<input id="donor-name" name="donorName" autocomplete="name" minlength="2" maxlength="80" required placeholder="e.g. Ali Raza"></label><div class="form-grid"><label>Mobile number<input id="donor-phone" name="phone" type="tel" autocomplete="tel" pattern="03[0-9]{2}-[0-9]{7}" required placeholder="03XX-XXXXXXX" title="Use 03XX-XXXXXXX, including the hyphen."></label><label>Donor category<select id="donor-category" name="donorCategory" required><option value="">Select category</option><option>Individual</option><option>University / Student group</option><option>Organization</option></select></label></div><label>Email address<input id="donor-email" name="email" type="email" autocomplete="email" required placeholder="donor@example.com"></label><label>Organization / institution <span class="optional">(required for groups)</span><input id="donor-organization" name="organization" maxlength="100" placeholder="Individual donors may leave this blank"></label></fieldset>
+          <label class="check-label attestation"><input id="quality-attestation" name="attestation" type="checkbox" required> I attest that the items meet the quality rule and accept the <a href="legal.html#terms">Donor Terms</a> and <a href="legal.html#privacy">Privacy Policy</a>.</label>
+          <div id="pledge-errors" class="error-box" aria-live="assertive" tabindex="-1" hidden></div>
+          <p class="sla-form">Operational SLA: Physical drop-off slot reservations verify instantly; bulk pickup dispatches (&gt;50 kg) receive coordinator confirmation within 2 operational hours.</p>
+          <button id="submit-pledge" class="button primary submit-button" type="submit">Record pledge &amp; reserve slot →</button><p class="form-footnote">Local demonstration receipt. Cargo of 50 kg or more is eligible for a simulated pickup request.</p>
+        </form>
+      </aside>
+    </div>
+    <section class="wide-section" aria-labelledby="pledges-title"><div class="section-heading"><div><span class="eyebrow">TRANSACTION RECORD / ALL HUBS</span><h2 id="pledges-title">Recent pledges &amp; slot ledger</h2></div><span id="pledge-count" class="mono"></span></div><p class="section-note">Opening drive totals include earlier aggregate pledges. These six sample bookings are already included, not added a second time. Revoking a record releases its units and reservation.</p><div class="table-wrap"><table class="data-table"><thead><tr><th>Reference / donor</th><th>Drive / hub</th><th>Units / cargo</th><th>Reserved window (PKT)</th><th>Action</th></tr></thead><tbody id="pledge-rows"></tbody></table></div><p id="ledger-message" role="status" class="section-note"></p></section>
+    <details class="coordinator-desk" id="coordinator-desk"><summary><span class="eyebrow">RESTRICTED WORKFLOW / DEMO ACCESS</span><span>Coordinator dispatch desk</span><span class="mono">+ LAUNCH A NEW DRIVE</span></summary><form id="drive-form" class="coordinator-form"><p class="full-width">Register a new requirement. This classroom coordinator mode has no authentication.</p><label>Drive title<input name="title" required minlength="5" maxlength="140"></label><label>Category<select name="category" id="new-category" required></select></label><label>Collection hub<select name="hub" id="new-hub" required></select></label><label>Target units<input name="targetUnits" type="number" min="1" max="1000000" step="1" required></label><label>Unit name<input name="unitName" required maxlength="25" placeholder="e.g. packs"></label><label>Weight per unit (kg)<input name="unitWeightKg" type="number" min="0.01" max="10000" step="0.01" required></label><label>Priority<select name="urgency"><option>STANDARD</option><option>HIGH</option><option>CRITICAL</option></select></label><label>Deadline<input name="deadline" id="new-deadline" type="date" required></label><label class="full-width">Mandatory quality rule<textarea name="qualityRule" minlength="10" maxlength="350" required rows="2"></textarea></label><div id="drive-errors" class="error-box full-width" role="alert" hidden></div><button class="button primary" type="submit">Register new drive →</button><p id="drive-message" class="section-note" role="status"></p></form></details>
+
+
+
+
+  </main>
+  <footer class="page-width site-footer"><div class="footer-main"><div><a class="footer-brand" href="index.html">AMANAT</a><p>Care, accounted for.<br>CS344 Web Engineering / Assignment 1<br>Muhammad Abdullah Rana</p></div><nav aria-label="Footer navigation"><a href="#ledger-workbench">Operations ledger</a><a href="#pledge-desk">Pledge desk</a><a href="hubs.html#hub-directory">Hub directory</a><a href="reports.html#case-studies">Field reports</a><a href="about.html#operational-faq">Operational FAQ</a><a href="about.html#directorate-roster">Directorate roster</a></nav><nav aria-label="Governance"><a href="legal.html#terms">Donor governance &amp; terms</a><a href="legal.html#privacy">Donor data &amp; privacy</a><a href="thank-you.html">Latest dispatch receipt</a><a href="404.html">Route directory</a><p>Browser-local records.<br>No external analytics.</p></nav></div><details id="telemetry-drawer" class="telemetry"><summary>Live Client Telemetry Log <span class="mono" id="telemetry-count">0 EVENTS</span></summary><p>Interaction names and operational references only. No donor contact details are logged.</p><ol id="telemetry-log"></ol></details><div class="footer-bottom"><span>AMANAT / TWIN CITIES RELIEF REGISTRY</span><span>EDUCATIONAL SIMULATION // 2026</span><a href="#">Back to masthead ↑</a></div></footer>
+  <div class="mobile-cta"><span><strong id="mobile-critical">3</strong> critical drives</span><a href="#pledge-desk">Jump to Pledge Desk ↑</a></div>
+  <dialog id="receipt-modal" aria-labelledby="receipt-heading"><div class="dialog-toolbar"><span class="mono">DISPATCH RECORD / LOCAL COPY</span><button type="button" class="text-button" id="close-receipt" aria-label="Close receipt">Close ×</button></div><div id="receipt-content" class="receipt"></div><div class="receipt-actions"><button class="button primary" id="print-receipt">Print receipt ↗</button><a class="button" href="thank-you.html">Open confirmation page →</a></div></dialog>
+  <dialog id="confirm-modal" aria-labelledby="confirm-heading"><div class="confirm-content"><span class="eyebrow">REGISTRY CONTROL</span><h2 id="confirm-heading">Confirm ledger change</h2><p id="confirm-message"></p><div class="receipt-actions"><button class="button" id="cancel-action">Keep records</button><button class="button primary" id="confirm-action">Confirm</button></div></div></dialog>
+  <noscript><div class="error-box">JavaScript is required for the local donation ledger. Enable it to calculate availability and record pledges.</div></noscript>
+</body>
+</html>

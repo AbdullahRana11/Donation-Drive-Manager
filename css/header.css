@@ -1,0 +1,157 @@
+/* Header-only branding. The navigation and content keep their own styles. */
+:root {
+  --brand-green:#183B35;
+  --brand-gold:#C9A227;
+  --brand-green-dark:color-mix(in srgb, var(--brand-green) 92%, black);
+  --brand-location:color-mix(in srgb, var(--brand-green) 68%, white);
+}
+
+@media screen {
+  body header.brand-header {
+    margin-top:0;
+    border-top:1px solid var(--brand-green);
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+  }
+  body header.brand-header .masthead-main {
+    display:grid;
+    grid-template-columns:auto minmax(0,1fr) auto;
+    align-items:center;
+    gap:0;
+    padding:28px 0;
+  }
+  body header.brand-header .wordmark {
+    display:inline-block;
+    font-family:var(--font-display);
+    font-weight:800;
+    font-size:clamp(2.4rem,4vw,3.4rem);
+    letter-spacing:-.045em;
+    line-height:1;
+    color:var(--brand-green);
+    padding-right:28px;
+  }
+  body header.brand-header .wordmark::after {
+    content:"";
+    display:inline-block;
+    width:.28em;
+    height:.28em;
+    margin-left:.15em;
+    border-radius:50%;
+    background:var(--brand-gold);
+    vertical-align:baseline;
+    user-select:none;
+  }
+  body header.brand-header .masthead-description {
+    display:block;
+    grid-column:auto;
+    min-width:0;
+    margin:0;
+    padding:0 28px;
+    border-left:1px solid rgba(20,20,19,.15);
+  }
+  body header.brand-header .masthead-description p {
+    font-family:var(--font-sans);
+    font-weight:600;
+    font-size:15px;
+    line-height:1.35;
+    letter-spacing:-.005em;
+    color:var(--ink);
+    margin:0;
+  }
+  body header.brand-header .masthead-description > span,
+  body header.brand-header > .issue-label {
+    display:block;
+    max-width:none;
+    font-family:var(--font-sans);
+    font-size:11px;
+    font-weight:600;
+    line-height:1.5;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    color:var(--brand-location);
+    margin-top:6px;
+  }
+  body header.brand-header .masthead-actions {
+    display:flex;
+    flex-direction:column;
+    grid-column:auto;
+    grid-row:auto;
+    gap:8px;
+    min-width:0;
+    width:auto;
+    margin:0;
+  }
+  body header.brand-header .masthead-actions .button {
+    padding:14px 24px;
+    border:1px solid var(--brand-green);
+    border-radius:0;
+    font-family:var(--font-sans);
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:.01em;
+    background:transparent;
+    color:var(--brand-green);
+    transition:background-color 180ms ease,border-color 180ms ease,transform 180ms ease,box-shadow 180ms ease;
+  }
+  body header.brand-header .masthead-actions .button.primary {
+    background:var(--brand-green);
+    color:#FFFFFF;
+  }
+  body header.brand-header .masthead-actions .button.primary:hover:not(:disabled) {
+    background:var(--brand-green-dark);
+    border-color:var(--brand-green-dark);
+    transform:translateY(-1px);
+    box-shadow:0 6px 16px rgba(0,0,0,.12);
+  }
+  body header.brand-header .masthead-actions .button:not(.primary):hover:not(:disabled) {
+    background:color-mix(in srgb, var(--brand-green) 6%, transparent);
+    border-color:var(--brand-green);
+  }
+  body header.brand-header .header-arrow { display:inline-block; transition:transform 180ms ease; }
+  body header.brand-header .button:hover .header-arrow { transform:translateX(3px); }
+  body header.brand-header .button:focus-visible,
+  body header.brand-header .wordmark:focus-visible {
+    outline:2px solid var(--brand-gold);
+    outline-offset:3px;
+  }
+  /* Receipt, legal and error pages retain their existing compact header content. */
+  body header.brand-header.secondary-header {
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    flex-wrap:nowrap;
+    gap:0;
+    padding:28px 0;
+    border-bottom:0;
+  }
+  body header.brand-header > .issue-label {
+    margin:0;
+    padding-left:28px;
+    border-left:1px solid rgba(20,20,19,.15);
+    text-align:left;
+  }
+}
+
+@media screen and (max-width:719px) {
+  body header.brand-header .masthead-main {
+    grid-template-columns:minmax(0,1fr);
+    gap:18px;
+  }
+  body header.brand-header .wordmark { font-size:2.2rem; padding-right:0; }
+  body header.brand-header .masthead-description { padding:0; border:0; }
+  body header.brand-header .masthead-actions {
+    grid-column:1;
+    grid-row:auto;
+    width:100%;
+  }
+  body header.brand-header .masthead-actions .button { width:100%; }
+  body header.brand-header.secondary-header { flex-direction:column; align-items:flex-start; gap:18px; }
+  body header.brand-header > .issue-label { padding-left:0; border:0; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  body header.brand-header .masthead-actions .button,
+  body header.brand-header .header-arrow { transition:none; }
+  body header.brand-header .masthead-actions .button.primary:hover:not(:disabled),
+  body header.brand-header .button:hover .header-arrow { transform:none; }
+}

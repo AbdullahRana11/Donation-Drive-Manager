@@ -1,0 +1,128 @@
+@import url('drives-fonts.css');
+
+:root {
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Manrope", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-pledge-title: "Libre Caslon Display", "Times New Roman", serif;
+}
+
+body[data-page="registry"] {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body[data-page="registry"] * {
+  font-family: var(--font-sans);
+}
+
+body[data-page="registry"] h1,
+body[data-page="registry"] h2,
+body[data-page="registry"] h3 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: normal;
+}
+
+body[data-page="registry"] p,
+body[data-page="registry"] .form-intro,
+body[data-page="registry"] .drive-rule,
+body[data-page="registry"] .quality-box p,
+body[data-page="registry"] .section-note,
+body[data-page="registry"] .sla-form,
+body[data-page="registry"] .form-footnote,
+body[data-page="registry"] .demo-note {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+body[data-page="registry"] #pledge-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -.03em;
+}
+
+body[data-page="registry"] .drive-row h3 {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+body[data-page="registry"] .workbench-heading h1 {
+  font-family: var(--font-pledge-title);
+  font-size: clamp(34px, 3.4vw, 48px);
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.16;
+  letter-spacing: -.015em;
+}
+
+body[data-page="registry"] .workbench-heading h1 span {
+  display: inline-block;
+  font-family: var(--font-pledge-title);
+  font-weight: 400;
+  font-style: normal;
+  white-space: nowrap;
+}
+
+body[data-page="registry"] .wordmark,
+body[data-page="registry"] .footer-brand,
+body[data-page="registry"] .receipt-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -.03em;
+}
+
+body[data-page="registry"] label:not(.check-label),
+body[data-page="registry"] .badge,
+body[data-page="registry"] .eyebrow,
+body[data-page="registry"] .kpi-strip h2,
+body[data-page="registry"] .assigned-hub>span {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+body[data-page="registry"] input,
+body[data-page="registry"] select,
+body[data-page="registry"] textarea {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+body[data-page="registry"] .drive-location,
+body[data-page="registry"] .kpi-strip p,
+body[data-page="registry"] .cargo-tier {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+body[data-page="registry"] .mono,
+body[data-page="registry"] .mono *,
+body[data-page="registry"] time,
+body[data-page="registry"] .drive-index,
+body[data-page="registry"] .drive-meta>span:not(.badge),
+body[data-page="registry"] .allocation-total,
+body[data-page="registry"] .allocation-total *,
+body[data-page="registry"] .allocation-status,
+body[data-page="registry"] .allocation-status *,
+body[data-page="registry"] .impact-stats strong,
+body[data-page="registry"] .impact-line,
+body[data-page="registry"] .kpi-strip strong,
+body[data-page="registry"] .kpi-strip strong *,
+body[data-page="registry"] .receipt-reference {
+  font-family: var(--font-mono);
+  font-weight: 400;
+}
+
+body[data-page="registry"] .masthead-description p { font-family:var(--font-sans); font-weight:500; }

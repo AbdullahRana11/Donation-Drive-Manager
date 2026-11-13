@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="og-title og-description">
+  <title id="og-title">AMANAT Twin Cities Relief and Donation Drive Registry</title>
+  <desc id="og-description">An archival paper and ink editorial title plate for the Islamabad and Rawalpindi donation registry, with four numbered collection sectors and a geometric dispatch monogram.</desc>
+  <rect width="1200" height="630" fill="#F4F1EA"/>
+  <path d="M48 48H1152" stroke="#141413" stroke-width="4"/>
+  <g fill="#57554F" font-family="monospace" font-size="15" letter-spacing="2">
+    <text x="48" y="85">VOL. IV // SERIAL #20</text>
+    <text x="1152" y="85" text-anchor="end">ISLAMABAD + RAWALPINDI</text>
+  </g>
+  <path d="M48 110H1152" stroke="#C9C3B8"/>
+  <text x="42" y="265" fill="#141413" font-family="Plus Jakarta Sans,Manrope,system-ui,sans-serif" font-size="160" letter-spacing="-7">AMANAT</text>
+  <text x="50" y="325" fill="#141413" font-family="Plus Jakarta Sans,Manrope,system-ui,sans-serif" font-size="37">Twin Cities Relief &amp; Donation Drive Registry</text>
+  <text x="50" y="373" fill="#57554F" font-family="Public Sans,Arial,sans-serif" font-size="19">A common purpose. A clear record. Every pledge accounted for.</text>
+  <g transform="translate(925 150)" fill="none" stroke="#141413" stroke-width="3">
+    <path d="M0 32L87 0L174 32V174L87 206L0 174Z"/>
+    <path d="M0 32L87 64L174 32M87 64V206M44 16L131 48V91L111 84V41"/>
+    <path d="M110 134H153M110 148H139M20 112L62 127V168L20 153Z"/>
+  </g>
+  <path d="M48 420H1152" stroke="#141413" stroke-width="2"/>
+  <g font-family="monospace" fill="#141413">
+    <text x="48" y="467" font-size="13" letter-spacing="2">COLLECTION SECTORS</text>
+    <text x="48" y="512" font-size="23">01 / H-12</text>
+    <text x="333" y="512" font-size="23">02 / F-8</text>
+    <text x="618" y="512" font-size="23">03 / SADDAR</text>
+    <text x="903" y="512" font-size="23">04 / I-10</text>
+  </g>
+  <path d="M307 483V527M592 483V527M877 483V527M48 551H1152" stroke="#C9C3B8"/>
+  <rect x="48" y="580" width="7" height="7" fill="#1B4332"/>
+  <g font-family="monospace" font-size="12" fill="#57554F" letter-spacing="1">
+    <text x="68" y="589">LOCAL REGISTRY / FIELD OPERATIONS</text>
+    <text x="1152" y="589" text-anchor="end">CS344 // EDUCATIONAL DEMONSTRATION</text>
+  </g>
+</svg>

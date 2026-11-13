@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="team-title team-description">
+  <title id="team-title">Four sector coordinators at the AMANAT field operations desk</title>
+  <desc id="team-description">An original monochrome architectural portrait of four fictional coordinators, identified by the H-12, F-8, Saddar and I-10 sector assignments. Drawn for the CS344 educational registry.</desc>
+  <rect width="1200" height="520" fill="#EAE5DA"/>
+  <g fill="#141413" font-family="monospace" font-size="13" letter-spacing="2">
+    <text x="32" y="36">AMANAT / FIELD OPERATIONS</text>
+    <text x="1168" y="36" text-anchor="end">DIRECTORATE PLATE 04</text>
+  </g>
+  <path d="M32 54H1168M32 430H1168" stroke="#141413" stroke-width="2" fill="none"/>
+  <g transform="translate(53 84)">
+    <path d="M16 302L43 220L99 194H151L207 220L234 302V346H16Z" fill="#57554F"/>
+    <path d="M99 183V214L125 233L151 214V183" fill="#C9C3B8" stroke="#141413" stroke-width="2"/>
+    <path d="M82 100C82 57 169 57 169 100V154C168 183 149 204 125 204S83 183 82 154Z" fill="#F4F1EA" stroke="#141413" stroke-width="2"/>
+    <path d="M79 117V93C77 39 175 39 172 95L168 124L157 101L143 87L111 97L94 94L90 120Z" fill="#141413"/>
+    <path d="M97 137H112M139 137H154M125 144L120 166H130M111 182Q125 188 139 182" fill="none" stroke="#141413" stroke-width="2"/>
+    <path d="M75 205L125 233L174 205L154 267L125 253L97 267Z" fill="#FAF8F5"/>
+    <path d="M125 253V346M54 267V346M196 267V346" stroke="#141413" stroke-width="2"/>
+    <rect x="154" y="279" width="38" height="25" fill="#F4F1EA"/>
+    <path d="M160 286H184M160 292H175" stroke="#141413" stroke-width="2"/>
+    <path d="M37 318H89L106 346H21M213 318H166L148 346H230" fill="#C9C3B8" stroke="#141413" stroke-width="2"/>
+  </g>
+  <g transform="translate(334 84)">
+    <path d="M17 346V274L53 220L95 204H153L197 221L231 274V346Z" fill="#141413"/>
+    <path d="M57 215C56 179 57 119 69 85C77 60 96 48 125 48S172 61 181 86C192 124 193 186 193 215L176 238L125 266L74 238Z" fill="#57554F" stroke="#141413" stroke-width="2"/>
+    <path d="M88 111C89 88 102 75 125 75C148 75 164 93 164 114V150C164 183 147 203 125 203C103 203 86 182 86 150Z" fill="#F4F1EA" stroke="#141413" stroke-width="2"/>
+    <path d="M84 117L102 82Q137 107 165 113M97 137H111M140 137H154M125 145L121 164H130M112 180Q125 187 138 180" fill="none" stroke="#141413" stroke-width="2"/>
+    <path d="M67 187L94 214L125 234L158 214L184 186M74 238L125 266L176 238" fill="none" stroke="#C9C3B8" stroke-width="2"/>
+    <path d="M52 281V346M196 281V346" stroke="#C9C3B8" stroke-width="2"/>
+    <rect x="155" y="279" width="38" height="25" fill="#F4F1EA"/>
+    <path d="M161 286H185M161 292H177" stroke="#141413" stroke-width="2"/>
+    <path d="M34 319H91L108 346H21M215 319H160L143 346H230" fill="#C9C3B8" stroke="#141413" stroke-width="2"/>
+  </g>
+  <g transform="translate(616 84)">
+    <path d="M15 346V265L47 221L96 201H153L202 221L235 265V346Z" fill="#C9C3B8" stroke="#141413" stroke-width="2"/>
+    <path d="M99 183V216L125 236L152 216V183" fill="#EAE5DA" stroke="#141413" stroke-width="2"/>
+    <path d="M83 106C83 62 167 62 167 106V155C167 183 146 204 125 204S83 183 83 155Z" fill="#F4F1EA" stroke="#141413" stroke-width="2"/>
+    <path d="M81 123L75 92L88 75L93 62L114 66L129 58L144 65L161 66L174 85L168 126L156 99L129 91L96 101Z" fill="#141413"/>
+    <path d="M88 154L99 177L125 185L151 176L163 152L161 183L147 202H105L89 183Z" fill="#57554F"/>
+    <path d="M94 133H114V147H94ZM136 133H156V147H136ZM114 138H136M125 146L121 165H129M113 177H137" fill="none" stroke="#141413" stroke-width="2"/>
+    <path d="M80 207L125 236L171 207L158 261L125 248L94 261Z" fill="#F4F1EA" stroke="#141413" stroke-width="2"/>
+    <path d="M125 248V346M51 275V346M198 275V346" stroke="#141413" stroke-width="2"/>
+    <rect x="155" y="279" width="38" height="25" fill="#141413"/>
+    <path d="M161 286H185M161 292H175" stroke="#F4F1EA" stroke-width="2"/>
+    <path d="M34 319H89L107 346H20M216 319H163L146 346H231" fill="#EAE5DA" stroke="#141413" stroke-width="2"/>
+  </g>
+  <g transform="translate(898 84)">
+    <path d="M14 346V272L46 224L98 205H150L205 224L236 272V346Z" fill="#57554F" stroke="#141413" stroke-width="2"/>
+    <path d="M99 185V214L124 235L150 214V185" fill="#C9C3B8" stroke="#141413" stroke-width="2"/>
+    <path d="M80 150V95C80 56 103 48 125 48C155 48 172 68 172 98V186L151 203L98 199L77 183Z" fill="#141413"/>
+    <path d="M86 110Q113 99 126 76Q142 99 164 108V150C162 180 147 203 125 203C103 203 86 182 86 150Z" fill="#F4F1EA" stroke="#141413" stroke-width="2"/>
+    <path d="M97 136H112M139 136H154M125 144L121 165H130M112 181Q125 188 138 181" fill="none" stroke="#141413" stroke-width="2"/>
+    <path d="M81 209L124 235L168 209L154 260L124 249L95 260Z" fill="#FAF8F5"/>
+    <path d="M124 249V346M51 275V346M198 275V346" stroke="#141413" stroke-width="2"/>
+    <rect x="156" y="279" width="38" height="25" fill="#F4F1EA"/>
+    <path d="M162 286H186M162 292H177" stroke="#141413" stroke-width="2"/>
+    <path d="M34 319H89L107 346H20M216 319H164L146 346H231" fill="#C9C3B8" stroke="#141413" stroke-width="2"/>
+  </g>
+  <g fill="#141413" font-family="monospace" font-size="14" letter-spacing="1">
+    <text x="66" y="460">[01] H-12 / NUST</text>
+    <text x="348" y="460">[02] F-8 / MARKAZ</text>
+    <text x="630" y="460">[03] SADDAR / CANTT</text>
+    <text x="912" y="460">[04] I-10 / STORAGE</text>
+  </g>
+  <g fill="#57554F" font-family="monospace" font-size="11">
+    <text x="66" y="486">INTAKE + STUDENT RELIEF</text>
+    <text x="348" y="486">HEALTH + EDUCATION</text>
+    <text x="630" y="486">FIELD DISTRIBUTION</text>
+    <text x="912" y="486">BULK CARGO + DRY GOODS</text>
+  </g>
+</svg>

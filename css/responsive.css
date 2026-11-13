@@ -1,0 +1,141 @@
+/* Fluid page gutters preserve a reading edge without boxing in wide screens. */
+@media screen {
+  :root { --page-gutter: clamp(14px, 1.6vw, 32px); }
+
+  .page-width {
+    width: auto;
+    max-width: none;
+    margin-inline: var(--page-gutter);
+  }
+
+  body > .main-nav { margin-inline: var(--page-gutter); }
+  main, section, aside, article, form, fieldset,
+  .workbench > *, .hub-layout > *, .team-layout > *,
+  .home-hero > *, .home-explainer > *, .home-steps > * {
+    min-width: 0;
+  }
+
+  p, h1, h2, h3, td, dd, .demo-note, .table-detail {
+    overflow-wrap: anywhere;
+  }
+
+  .masthead-main {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    gap: clamp(20px, 3vw, 48px);
+  }
+  .masthead-description { min-width: 0; margin: 0; }
+  .masthead-actions { min-width: 0; margin: 0; }
+  .wordmark { white-space: nowrap; }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 0;
+    overflow: visible;
+  }
+  .main-nav a {
+    flex: 1 1 auto;
+    min-height: 44px;
+    padding: 13px 14px;
+    text-align: center;
+    white-space: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-hero {
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, .9fr);
+    gap: clamp(24px, 3vw, 56px);
+  }
+  .home-hero p { max-width: 72ch; }
+  .home-purpose { align-self: stretch; }
+  .home-explainer, .home-steps { gap: 28px clamp(24px, 4vw, 64px); }
+  .home-explainer p { max-width: 75ch; }
+  .page-intro { max-width: 80ch; }
+
+  .workbench { gap: clamp(20px, 2vw, 36px); }
+  .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .desk-form fieldset { min-inline-size: 0; }
+  .check-label { overflow-wrap: anywhere; }
+  .filter-toggle { flex-shrink: 0; }
+  .button { min-height: 44px; }
+  .table-wrap { max-width: 100%; }
+  .data-table { overflow-wrap: anywhere; }
+
+  .secondary-main { max-width: none; }
+  .legal-layout { grid-template-columns: minmax(180px, 240px) minmax(0, 1fr); }
+  .legal-copy { max-width: 85ch; }
+  .receipt-page { width: min(100%, 760px); }
+  dialog { max-height: 90vh; max-height: 90dvh; }
+}
+
+@media screen and (max-width: 1080px) {
+  .masthead-main { grid-template-columns: auto minmax(0, 1fr); gap: 20px; }
+  .masthead-actions { grid-column: 1 / -1; flex-direction: row; justify-content: flex-end; }
+  .masthead-description { border: 0; padding: 0; }
+  .masthead-description p { font-size: 22px; }
+  .workbench { grid-template-columns: minmax(0, 1fr); }
+  .registry-panel, .pledge-panel { grid-column: 1; }
+}
+
+@media screen and (max-width: 900px) {
+  .home-hero { grid-template-columns: minmax(0, 1fr); }
+  .home-purpose { padding: 28px; }
+  .hub-layout, .team-layout { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media screen and (max-width: 768px) {
+  .masthead-main { gap: 16px; }
+  .masthead-description p { font-size: 18px; }
+  .masthead-description > span { font-size: 10px; max-width: none; }
+  .masthead-actions { width: auto; }
+  .masthead-actions .button { flex: 1; font-size: 12px; }
+  .main-nav a { flex-basis: 30%; font-size: 12px; }
+  .home-explainer, .home-steps, .legal-layout { grid-template-columns: minmax(0, 1fr); }
+  .home-end { align-items: stretch; }
+  .page-intro h1 { font-size: clamp(30px, 6vw, 42px); }
+  .section-heading { flex-wrap: wrap; }
+  .hub-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  input:not([type=checkbox]), select, textarea { font-size: 16px; }
+  .text-button, .select-drive { min-height: 44px; }
+  .data-table tr { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .footer-main { gap: 24px; }
+  .site-footer { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .mobile-cta {
+    gap: 12px;
+    padding-bottom: max(12px, env(safe-area-inset-bottom, 0px));
+  }
+  .receipt { padding: 22px; }
+  .receipt dl { grid-template-columns: minmax(0, 100px) minmax(0, 1fr); }
+  .receipt-actions > .button { flex: 1 1 180px; }
+}
+
+@media screen and (max-width: 480px) {
+  .masthead-main { grid-template-columns: minmax(0, 1fr) auto; }
+  .masthead-description { display: block; grid-column: 1 / -1; }
+  body[data-page="home"] .masthead-description { display: block; }
+  .masthead-actions { grid-column: 2; grid-row: 1; }
+  .masthead-actions .button { font-size: 11px; padding-inline: 10px; }
+  body[data-page="registry"] .masthead-actions { grid-column: 1 / -1; grid-row: auto; }
+  .wordmark, .secondary-header .wordmark { font-size: clamp(34px, 10vw, 44px); }
+  .main-nav a { flex-basis: 45%; }
+  .form-grid, .coordinator-form { grid-template-columns: minmax(0, 1fr); }
+  .coordinator-form > *, .coordinator-form button, .coordinator-form #drive-message { grid-column: 1; }
+  .filter-fields { grid-template-columns: minmax(0, 1fr); }
+  .filter-fields .check-label, .filter-fields > .text-button { grid-column: 1; }
+  .filter-fields > .text-button { justify-self: start; }
+  .assigned-hub { flex-wrap: wrap; }
+  .impact-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .impact-stats strong { font-size: 20px; }
+  .data-table tr { grid-template-columns: minmax(0, 1fr); }
+  .data-table td:last-child { grid-column: 1; }
+  .hub-cards { grid-template-columns: minmax(0, 1fr); }
+  .hub-card { border-right: 0; border-bottom: 1px solid var(--line); }
+  .hub-card:nth-child(n+3) { border-bottom: 1px solid var(--line); }
+  .hub-card:last-child { border-bottom: 0; }
+  .footer-main { grid-template-columns: minmax(0, 1fr); }
+  .footer-main > div { grid-column: 1; }
+  .secondary-header { flex-wrap: wrap; }
+  .route-links a { gap: 12px; font-size: 21px; }
+}
