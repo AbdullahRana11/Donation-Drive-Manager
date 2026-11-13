@@ -1,4 +1,4 @@
-# AMANAT — Community Donation Drive Manager
+# AMANAT: Community Donation Drive Manager
 
 A client-side CS344 Web Engineering project for Assignment 1, Topic 20. AMANAT demonstrates how donors can find community requirements, pledge items and reserve collection windows across Islamabad and Rawalpindi.
 
