@@ -45,7 +45,7 @@ Images are served locally, with responsive source selection, explicit dimensions
 
 ## Current Pakistani community imagery
 
-Three original photorealistic illustrations were generated with the built-in OpenAI image-generation tool on November 13, 2026 for the user's requested Pakistani context. The full prompts are preserved in [IMAGE-PROMPTS.md](IMAGE-PROMPTS.md).
+Three original photorealistic illustrations were generated with the built-in OpenAI image-generation tool on November 13, 2026 for the user's requested Pakistani context. Their subjects and uses are listed below; the optional full prompt record is kept locally outside the repository.
 
 - `assets/images/generated/islamabad-volunteers`: Pakistani volunteers packing quilts and clothing in an Islamabad-inspired room (home hero).
 - `assets/images/generated/rawalpindi-collection`: a neighbourhood collection point inspired by Rawalpindi (home project explanation).

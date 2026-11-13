@@ -62,7 +62,6 @@ Assignment 1/
 |   |-- WIREFRAME.md            Layout sketches and page map
 |   |-- ATTRIBUTION.md          Asset origins and AI assistance
 |   |-- VERIFICATION.md         Browser and workflow checks
-|   |-- IMAGE-PROMPTS.md        Generated-image provenance
 |   `-- screenshots/            Eight current submission screenshots
 |-- scripts/
 |   `-- serve.cjs               Optional local static preview helper
@@ -151,7 +150,7 @@ The review covered the supplied lectures except the PHP and database lectures. S
 - Clearing this site's browser data removes saved drives, pledges and receipts; reopening Donate initializes sample records. Revocation removes the live booking; its latest receipt snapshot remains marked inactive until replaced or cleared. Printed/downloaded copies are separate.
 - A storage listener refreshes records from another tab. Simultaneous edits are not atomic; this is a single-browser prototype, without shared server bookings or authentication.
 - Use sample donor details. Anyone using the browser profile can view its records. All staff, inspection sign-offs and historical outcomes are fictional. Hub coordinates are approximate sector references, not verified receiving depots.
-- Publishing this repository does not itself deploy the website. Crawler files use the local preview origin. Update those URLs and review indexing/404 configuration before deployment. The local execution instructions above support a classroom demonstration.
+- The deployment address is `https://abdullahrana11.github.io/Donation-Drive-Manager/`. The sitemap lists the six public content pages at that address, excluding the browser-specific receipt and error page. The project-level `robots.txt` contains the sitemap URL; crawlers normally read robots rules from the domain root, so this subdirectory file does not control the whole GitHub Pages domain. GitHub Pages must be enabled separately from pushing source code. The local execution instructions above also support a classroom demonstration.
 
 ## Verification
 
@@ -169,4 +168,4 @@ All eight pages use shared fluid gutters and `css/responsive.css`. Desktop conte
 
 Checks covered 15 viewport widths from 280px through 2560px across all pages, a 640px reflow view equivalent to a 1280px window at 200% zoom, and the mobile pledge workflow. Chrome and Edge were also checked after the small-screen header refinement. Physical devices and Safari/Firefox have not been tested.
 
-The three Pakistani community images were generated with OpenAI's image-generation tool and depict fictional people and settings. They are stored in `assets/images/generated/` as original PNGs and responsive WebP variants. Styling is in `css/photography.css`; [image prompts](docs/IMAGE-PROMPTS.md) and [attribution](docs/ATTRIBUTION.md) record their provenance. All variants are local for offline use.
+The three Pakistani community images were generated with OpenAI's image-generation tool and depict fictional people and settings. They are stored in `assets/images/generated/` as original PNGs and responsive WebP variants. Styling is in `css/photography.css`; the [attribution document](docs/ATTRIBUTION.md) records their provenance. All variants are local for offline use.
